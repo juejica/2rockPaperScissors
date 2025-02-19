@@ -1,9 +1,10 @@
 // computer choice
 function getComputerChoice() {
-  let choice = Math.random() * 3
-  if (choice <= 1) {
+  let choice = Math.floor(Math.random() * 3)
+
+  if (choice === 0) {
     return 'rock'
-  } else if (choice > 1 && choice <= 2) {
+  } else if (choice === 1) {
     return 'paper'
   } else {
     return 'scissors'
