@@ -1,4 +1,4 @@
-//Logic to get the computer choice (without using an array)
+// Logic to get the computer choice (without using an array)
 function getComputerChoice() {
   let choice = Math.floor(Math.random() * 3)
 
@@ -11,7 +11,7 @@ function getComputerChoice() {
   }
 }
 
-//Logic to get the human choice
+// Logic to get the human choice
 function getHumanChoice() {
   let input = prompt(
     'Take your pick between Rock, Paper, or Scissors.'
@@ -23,12 +23,12 @@ function getHumanChoice() {
   }
 }
 
-//Logic to play 5 rounds
+// Function to play 5 rounds
 function playGame() {
   let humanScore = 0
   let computerScore = 0
 
-  //Function to play 1 round
+  // Function to play 1 round
   function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase()
     computerChoice = computerChoice.toLowerCase()
@@ -61,6 +61,7 @@ function playGame() {
     }
   }
 
+  // Loops playRound() function 5 times
   for (let round = 1; round <= 5; round++) {
     console.log('-------------------------------------------------')
     console.log(`Round ${round}`)
@@ -69,18 +70,19 @@ function playGame() {
     playRound(humanChoice, computerChoice)
   }
 
+  // Displays outcome
   console.log()
   if (humanScore > computerScore) {
     console.log('*************************************************')
     console.log('Congratulations! You won the game!')
   } else if (humanScore < computerScore) {
     console.log('*************************************************')
-    console.log('Better luck next time! The computer won the game.')
+    console.log('Womp womp. The computer won the game.')
   } else {
     console.log('*************************************************')
-    console.log("It's a tie!")
+    console.log("It's a tie. Try again!")
   }
 }
 
-//Start the game
+// Start the game
 playGame()
