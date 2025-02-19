@@ -78,7 +78,7 @@ function playGame() {
     console.log('Better luck next time! The computer won the game.')
   } else {
     console.log('*************************************************')
-    console.log("It's a draw!")
+    console.log("It's a tie!")
   }
 }
 
