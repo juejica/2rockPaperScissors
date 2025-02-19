@@ -16,12 +16,8 @@ let input = prompt(
   'Take your pick between Rock, Paper, or Scissors.'
 ).toLowerCase()
 function getHumanChoice() {
-  if (input === 'rock') {
-    return 'Rock'
-  } else if (input === 'paper') {
-    return 'Paper'
-  } else if (input === 'scissors') {
-    return 'Scissors'
+  if (input === 'rock' || input === 'paper' || input === 'scissors') {
+    return input
   } else {
     return 'Invalid choice. Please choose Rock, Paper, or Scissors.'
   }
