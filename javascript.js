@@ -12,14 +12,18 @@ function getComputerChoice() {
 }
 
 //human choice
-let input = prompt('Take your pick between Rock, Paper, Scissors.')
+let input = prompt('Take your pick between Rock, Paper, or Scissors.')
 function getHumanChoice() {
-  if (input.toLowerCase() === 'rock') {
+  let answer = input.toLowerCase()
+
+  if (answer === 'rock') {
     return 'Rock'
-  } else if (input.toLowerCase() === 'paper') {
+  } else if (answer === 'paper') {
     return 'Paper'
-  } else {
+  } else if (answer === 'scissors') {
     return 'Scissors'
+  } else {
+    return 'Invalid choice. Please choose Rock, Paper, or Scissors.'
   }
 }
 console.log(getHumanChoice())
